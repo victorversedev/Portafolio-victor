@@ -123,10 +123,20 @@ eficientes e innovadoras.
   </div>
 </div>
             </div>
-            <button>
-                Descargar CV <i class="fa-solid fa-download"></i>
-                <span class="overlay"></span>
-            </button>
+           <button id="descargarCV">
+    Descargar CV <i class="fa-solid fa-download"></i>
+    <span class="overlay"></span>
+</button>
+
+<script>
+document.getElementById("descargarCV").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "cv.pdf";       // Tu PDF está en la raíz del proyecto
+    link.download = "cv.pdf";   // Nombre con el que se descargará
+    link.click();
+});
+</script>
+
         </div>
     </section>
 
@@ -351,7 +361,7 @@ eficientes e innovadoras.
     <!-- SECCION PORTFOLIO -->
    <section id="portfolio" class="portfolio">
     <div class="contenido-seccion">
-        <h2>PORTFOLIO</h2>
+        <h2>PORTAFOLIO</h2>
         <div class="galeria">
             <div class="proyecto">
                 <img src="img/p1.jpg" alt="">
