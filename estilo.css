@@ -274,6 +274,10 @@ html{
     right: -15px;
     font-size: 14px;
 }
+.progreso {
+  animation-fill-mode: forwards;
+}
+
 /* Estas clases se agregaran dinamicamente mediante javascript */
 
 
@@ -693,4 +697,40 @@ footer .arriba{
     .contacto .fila .col{
         width: 100%;
     }
+}
+
+.proyecto.sin-imagen {
+  background-color: #1CB698; /* color llamativo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* igual altura que tus imágenes */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.proyecto.sin-imagen .overlay {
+  position: static;
+  text-align: center;
+  color: #fff;
+  background: none;
+  padding: 20px;
+}
+
+.proyecto.sin-imagen h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.proyecto.sin-imagen p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.proyecto.sin-imagen:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: 0.3s;
 }

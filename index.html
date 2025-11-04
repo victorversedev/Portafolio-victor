@@ -358,35 +358,71 @@ document.getElementById("descargarCV").addEventListener("click", function() {
 </section>
 
 
-    <!-- SECCION PORTFOLIO -->
-   <section id="portfolio" class="portfolio">
-    <div class="contenido-seccion">
-        <h2>PORTAFOLIO</h2>
-        <div class="galeria">
-            <div class="proyecto">
-                <img src="img/p1.jpg" alt="">
-                <div class="overlay">
-                    <h3>Diseño BLOG</h3>
-                    <p>BLOG PERSONAL</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="img/p2.jpg" alt="">
-                <div class="overlay">
-                    <h3>Between Pages</h3>
-                    <p>Gestión / Biblioteca</p>
-                </div>
-            </div>
-            <div class="proyecto">
-                <img src="img/p3.jpg" alt="">
-                <div class="overlay">
-                    <h3>Diseño</h3>
-                    <p>app Web Responsiva</p>
-                </div>
-            </div>
+<!-- SECCION PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+  <div class="contenido-seccion">
+    <h2>PORTAFOLIO</h2>
+    <div class="galeria">
+
+      <!-- Proyecto con imagen -->
+      <div class="proyecto" data-url="https://github.com/victorversedev/sitio-web.git">
+        <img src="img/p1.jpg" alt="">
+        <div class="overlay">
+          <h3>Diseño Blog Personal</h3>
+          <p>Flask / Python</p>
         </div>
+      </div>
+
+      <div class="proyecto" data-url="https://github.com/victorversedev/betweenpages.git">
+        <img src="img/p2.jpg" alt="">
+        <div class="overlay">
+          <h3>Between Pages</h3>
+          <p>Laravel / PHP</p>
+        </div>
+      </div>
+
+      <div class="proyecto" data-url="https://github.com/victorversedev/healthin_smartphone.git">
+        <img src="img/p3.jpg" alt="">
+        <div class="overlay">
+          <h3>Diseño app móvil</h3>
+          <p>Flutter / Dart</p>
+        </div>
+      </div>
+
+
+      <div class="proyecto sin-imagen" data-url="https://github.com/victorversedev/Asistente.git">
+        <img src="img/api.jpg" alt="">
+        <div class="overlay">
+          <h3>API de Asistente Personal</h3>
+          <p>Laravel / PHP</p>
+        </div>
+      </div>
+
+      <div class="proyecto sin-imagen" data-url="https://github.com/victorversedev/Csshop.git">
+        <img src="img/p4.jpg" alt="">
+        <div class="overlay">
+          <h3>App escritorio de Reportes</h3>
+          <p>C# / SQL</p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
+<!-- Script para abrir el enlace -->
+<script>
+  document.querySelectorAll('.proyecto').forEach(card => {
+    card.addEventListener('click', () => {
+      const url = card.getAttribute('data-url');
+      if (url) {
+        window.open(url, '_blank');
+      }
+    });
+  });
+</script>
+
+
 
 
    <!-- SECCION CONTACTO -->
