@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #F2F1EC; color: #0D0E10;
+    font-family: "Inter Tight", sans-serif;
+    padding: 52px 64px 48px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(13,14,16,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(13,14,16,.055) 1px, transparent 1px);
+    background-size: 72px 72px;
+    -webkit-mask-image: radial-gradient(ellipse 75% 70% at 40% 35%, #000 20%, transparent 80%);
+  }
+  .mono { font-family: "JetBrains Mono", monospace; font-size: 13px; letter-spacing: .13em; text-transform: uppercase; color: #62655E; }
+  .top, .bottom { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .mark {
+    width: 48px; height: 48px; border-radius: 5px; background: #0D0E10; color: #D8FF3E;
+    font-family: "JetBrains Mono", monospace; font-size: 13px; display: grid; place-items: center;
+  }
+  .brand strong { display: block; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+  .brand > div span { display: block; margin-top: 3px; font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #62655E; }
+  .mid { position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
+  .copy { max-width: 760px; }
+  .eyebrow { margin-bottom: 18px; }
+  h1 { font-size: 86px; line-height: .93; letter-spacing: -.045em; font-weight: 600; }
+  h1 em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -.02em; }
+  h1 .hl {
+    display: inline-block;
+    background: linear-gradient(transparent 58%, #D8FF3E 58%, #D8FF3E 96%, transparent 96%);
+    padding: 0 .06em;
+  }
+  .sub { margin-top: 26px; font-size: 20px; line-height: 1.4; color: #2A2C28; max-width: 520px; }
+  .photo-wrap { position: relative; flex-shrink: 0; }
+  .photo-wrap::before {
+    content: ""; position: absolute; inset: 14px -14px -14px 14px; background: #D8FF3E; border-radius: 4px;
+  }
+  .photo {
+    position: relative; width: 300px; height: 388px; object-fit: cover; object-position: top center;
+    border: 1px solid #D7D6CF; border-radius: 4px; display: block; background: #fff;
+  }
+  .bottom .right { text-align: right; }
+  .bottom .right .mono { display: block; margin-top: 5px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3BB273; margin-right: 8px; vertical-align: 1px; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="brand">
+      <span class="mark">VR</span>
+      <div>
+        <strong>Víctor Rivera</strong>
+        <span>Soporte TI &amp; Desarrollo de Software</span>
+      </div>
+    </div>
+    <span class="mono">Portafolio — 2026</span>
+  </div>
+
+  <div class="mid">
+    <div class="copy">
+      <div class="eyebrow mono"><span class="dot"></span> Disponible para nuevos retos</div>
+      <h1>Menos incidencias.<br><em class="hl">Más operación.</em></h1>
+      <p class="sub">Soporte TI, backend y automatización con IA para que los equipos trabajen sin fricción.</p>
+    </div>
+    <div class="photo-wrap">
+      <img class="photo" src="img/foto-victor.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="bottom">
+    <span class="mono">Soporte TI · Backend · Automatización</span>
+    <div class="right">
+      <span class="mono">Hermosillo, Sonora · MX</span>
+      <span class="mono">portafolio-victor-three.vercel.app</span>
+    </div>
+  </div>
+</body>
+</html>
